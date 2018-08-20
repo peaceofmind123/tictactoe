@@ -49,7 +49,7 @@ if __name__ == '__main__':
         board.currentSign = computer.sign
         MAXSIGN = computer.sign
 
-    while board.isLeaf() is False:
+    while board.isLeaf(MAXSIGN) is False:
         if board.turnStr=='user':
             print("Current state")
             board.displayState()
@@ -69,5 +69,5 @@ if __name__ == '__main__':
             board.displayState()
         else:
 
-            board = board.findMoveAndMoveIt(MAXSIGN)
+            board = board.findMoveAndMoveIt(MAXSIGN,computer.sign)
             board.displayState()
